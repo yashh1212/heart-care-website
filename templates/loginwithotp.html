@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with OTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px;
+            padding: 20px;
+            background-image: linear-gradient(to right,#4d174d,#5a2e49);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+        }
+        .otp-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Login with OTP</h1>
+            <p>Enter your phone number to receive OTP:</p>
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+            <p><button id="sendOTP">Send OTP</button></p>
+
+            <div class="otp-input" id="otpInput">
+                <p>Enter OTP sent to your phone:</p>
+                <input type="text" id="otp" placeholder="OTP" required>
+                <p></p><button id="verifyOTP">Verify OTP</button></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("sendOTP").addEventListener("click", function() {
+            alert("OTP Sent to your phone number.");
+            document.getElementById("otpInput").style.display = "block";
+        });
+
+        document.getElementById("verifyOTP").addEventListener("click", function() {
+            var enteredOTP = document.getElementById("otp").value;
+            alert("OTP Verified successfully!");
+        });
+    </script>
+</body>
+</html>

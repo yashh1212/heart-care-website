@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/userregister.css')}}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+    <title>registration</title>
+    
+</head>
+<body>
+    <div class="container">
+        <form  method="POST" action="/add_user">
+            <h2>REGISTRATION</h2>
+            <div class="content"> 
+                <div class="input-box">
+                    <label for="firstname ">Firstname :</label>
+                    <input type="text" placeholder="Firstname" name="firstname" required> 
+                </div>
+
+                <div class="input-box">
+                    <label for="lastname">Lastname :</label>
+                    <input type="text" placeholder="lastname" name="lastname" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="Email">Email :</label>
+                    <input type="email" placeholder="Email" name="email" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="phonenumber">Mobile No :</label>
+                    <input type="phonenumber" placeholder="Mobile No" name="mobile" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password :</label>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">confirm password :</label>
+                    <input type="password" placeholder="Confirm Password" name="confirm" required>
+                </div>    
+                <span class="gender-title">Gender :</span>
+                <div class="gender">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="transgender">
+                        Transgender
+                    </label>
+                </div>
+                <div class="button">
+                    <button type="submit" >Register</button>
+                </div>
+                <div class="register-link">
+                    <p>if already have account...
+                        <a href="/userlogin">Log in</a></p>
+                  </div>
+            </div>
+
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-success">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+    </div>
+</body>
+</html>

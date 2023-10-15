@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CSS for header */
+.header {
+  display: flex;
+  /* position: fixed; */
+  top: 0%;
+  left: 0%;
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  /* background-image: linear-gradient(to right,#4d174d,#5a2e49); */
+  
+  
+   /* background-color: rgb(190, 203, 205); */
+   background-color: #fff;
+}
+
+.header .logo {
+  display: flex;
+  height: 70px;
+  width: 80px;
+  margin-left: 50px;
+  /* background-blend-mode: multiply;
+  mix-blend-mode: multiply; */
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+  font-weight:600;
+  padding: 35px 20px;
+}
+.intro {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: left;
+    /* margin: auto; */
+    width: 100%;
+    /* margin-top: 100px; */
+    background-color: #daeae8;
+    height: 200px;
+    background-size: cover;
+    background-position:left;
+    background-repeat: no-repeat;
+    
+  }
+ 
+  .intro .logo1 {
+    display: flex;
+    height: 60px;
+    width: 60px;
+      position: relative;
+      top: -100px;
+      right: -886px;
+  margin-right: 15px;
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+
+  
+  
+  .intro p {
+    font-size: 20px;
+    color: #07074d;
+    margin-left: 15px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  
+  
+  .intro button {
+    background-color: #5edaf0;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+  }
+  label {
+    margin-top: 10px;
+    color: #07074d;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+h3{
+  position: absolute;
+  top: 43%;
+  left: 70%;
+}
+.h1{
+  margin-left: 15px;
+
+}
+h2{
+  margin-left: 15px;
+}
+.datetime-container {
+  margin-top: 500px;
+  text-align: center;
+  margin: -20px 60px;
+  max-width: 550px;
+}
+
+.datetime {
+  font-size: 17px;
+  float: left;
+  padding-top: 10px;
+  margin-left: 1150px;
+  display: flex;
+  
+  font-weight: bold;
+}
+.datetime1 {
+  display: flex;
+  position: absolute;
+  top: 305px;
+  margin-left: 1150px;
+  /* left: 1000; */
+ float: left;
+ font-size: 25px;
+ 
+
+}
+
+  .box {
+    margin: left;
+    background-color: #daeae8;
+    opacity: 80%;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    border-radius: 10px;
+    top:60%;
+    left: 5%;
+    padding: 10px;
+    border: 0px solid crimson;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+  }
+  .formbold-mb-5 {
+    margin-bottom: 20px;
+    font-size: 25px;
+
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    background: transparent;
+    position: absolute;
+    top: 20%;
+    max-width: 550px;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 500px;
+    font-size: 25px;
+    color: #07074d;
+    margin-bottom: 12px;
+  }
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .button {
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  top: 130%;
+  left: 2%;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background-color: #6a64f1;
+  color: white;
+  width: 96%;
+  height: 42px;
+  }
+  .h2{
+    padding-top: 12px;
+  }
+  .button a{
+    color: #ccc;
+  }
+  .button:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 100%;
+  }
+  @media (min-width: 300px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+ 
+  .box1 {
+    margin: right;
+    width: 600px;
+    height: 600px;
+    padding: 10px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    border: 0 solid rgb(79, 79, 80);
+}
+
+.box2 {
+  margin: right;
+  border-radius: 15px;
+  position: absolute;
+  top: 1%;
+  left:2%;
+  width: 260px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid rgb(79, 79, 80);
+}
+
+  .box5 {
+    margin: right;
+    border-radius: 15px;
+    position: absolute;
+    top: 1%;
+    left:53%;
+    width: 260px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid rgb(79, 79, 80);
+}
+
+.box3 {
+  margin: right;
+  border-radius: 15px;
+  position: absolute;
+  top: 29%;
+  left:2%;
+  width: 569px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid rgb(79, 79, 80);
+}
+.box3 h2{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.box4 {
+  margin: right;
+  border-radius: 15px;
+  position: absolute;
+    top: 59%;
+    left:2%;
+  width: 569px;
+  height: 170px;
+  padding: 10px;
+  border: 1px solid rgb(79, 79, 80);
+}
+.box7 {
+  margin: left;
+  width: 600px;
+  height: 60px;
+  position: absolute;
+  top: 128%;
+  left: 50%;
+  padding: 10px;
+  border: 1px ;
+}
+.formbold-btn {
+  /* text-align: center; */
+  font-size: 16px;
+  position: absolute;
+  top: 75%;
+  left: 2%;
+  border-radius: 6px;
+  padding: 14px 32px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-weight: 600;
+  background-image: linear-gradient(to right,#ecd199,#c8921c);
+  color: white;
+  width: 96%;
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.formbold-btnbtn:hover {
+  color: white;
+}
+
+.formbold-btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-image: #c8921c linear-gradient(to right,#c8921c,#c8921c);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.formbold-btn:hover::before {
+  /* width: 160%; */
+}
+.para p{
+  position: absolute;
+  top: 4%;
+  left: 20%;
+}
+.para1 p{
+  position: absolute;
+  top: 6%;
+  left: 10%;
+}

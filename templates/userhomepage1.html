@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/userhomepage1.css')}}">
+</head>
+<body>
+
+    <div class="container">
+                        <header>
+                            <div class="logo">
+                                <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">   
+                        </div>
+                            
+                            <h1>Welcome to Heart care</h1>
+                        </header>
+                        <nav>
+                            <ul>
+                                
+                                <li><a href="#">Profile</a></li>
+                                <lie><a href="/">Logout</a></lie>
+                            </ul>
+                        </nav>
+                        <main>
+                            <img src="doctor.png" alt="Your Company Logo">
+                            <p> * A healthy heart is a key to happiness in life.</p>
+                            <p> * A strong heart can more efficiently pump blood to deliver oxygen and nutrients to other parts of your body.</p>
+                            <p> * A standard heart rate that ranges from 60 to 100 beats in a minute.</p>
+                            <p> * Beauty is not in the face; beauty is a light in the heart.</p>
+                            
+                    <nava>
+                    <ul>
+                        <li><a href="/predict_data">Predict your disease</a></li>
+                        <li><a href="/getappoinment">Get Your Appoinment</a></li>
+
+                        
+                    </ul>
+                    </nava>
+                </main>
+            
+        </div>
+
+        <script >
+            document.addEventListener("DOMContentLoaded", function() {
+                // Replace this with your actual profile data
+                const userProfile = {
+                    username: "JohnDoe",
+                    email: "john@example.com",
+                    // Add more data fields as needed
+                };
+            
+                // Display the user profile information
+                const profileSection = document.querySelector(".profile");
+                profileSection.innerHTML = `
+                    <h2>Your Profile</h2>
+                    <p>Username: ${userProfile.username}</p>
+                    <p>Email: ${userProfile.email}</p>
+                    <!-- Add more profile details here -->
+                `;
+            });
+            
+        </script>
+</body>
+</html>

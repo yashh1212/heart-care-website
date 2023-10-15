@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Care Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/doctorhomepage1.css')}}">
+</head>
+<body>
+    <header class="header">
+      <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">      
+        <nav class="nav-items">
+        <a href="#">Profile</a>
+        <a href="/">log out</a>
+      </nav>
+    </header>
+  
+    <main>
+  
+      <div class="heart-rate">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
+              <polyline fill="none" stroke="#009B9E" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
+              />
+            </svg>
+            <div class="fade-in"></div>
+            <div class="fade-out"></div>
+        </div>
+  
+      
+        <div class="intro">
+        <h1>Heart Care For You</h1>
+         
+          <p>Your Heartcare is What We Do.</p>
+        </div >
+
+        <div class="intro1"> 
+          <h2>Patient List</h2> 
+         </div> 
+
+      <div class="container">
+        <form action="/doctor_home" method="POST">
+            <h2> </h2>
+            <div class="content"> 
+              <table class="table">
+                <tr  class="table_header">
+                    {% for name in headings %}
+                    <th class="table_cell">{{ name }}</th>
+                    {% endfor %}
+                </tr>
+                {% for column in data %}  
+                {% for row in data %}
+                    <tr class="table_row">
+                        {% for cell in row %}
+                        <td class="table_cell">{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                {% endfor %}
+               </table>
+            </div>
+          
+          </form>
+      </div>
+
+    </main>
+</body>
+
+</html>  

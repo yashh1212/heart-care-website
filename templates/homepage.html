@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Care Website</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/home.css')}}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">      
+       <nav class="nav-items">
+      <a href="body.">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <img  class="img" src="{{ url_for('static', filename='img6.png') }}" alt="Logo">
+      <h1>Heart Care For You</h1>
+      <p>Your Heartcare is What We Do.</p>
+      
+    </div>
+
+    <div class="achievements">
+      <div class="work">
+        <i class='bx bxs-user'></i>
+        <a href="/userlogin"><p class="work-heading">User</p></a>
+        <p class="work-text">Login For User</p>
+      </div>
+      <div class="work">
+        <i class='bx bxs-user'></i>
+        <a href="/doctorlogin"><p class="work-heading">Doctor</p></a>
+        <p class="work-text">Login For Doctor</p>
+      </div>
+    </div>
+
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>About Heart</h2>
+        <p> * A healthy heart is a key to happiness in life.</p>
+        <p> * A strong heart can more efficiently pump blood to deliver oxygen and nutrients to other parts of your body.</p>
+        <p> * A standard heart rate that ranges from 60 to 100 beats in a minute.</p>
+        <p> * Beauty is not in the face; beauty is a light in the heart.</p>
+      </div>
+      <img src="https://c4.wallpaperflare.com/wallpaper/874/941/205/heart-man-medicine-lungs-wallpaper-preview.jpg" href="images/image.png" alt="Image Description">
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="copy">&copy; Everyting will be fine.</div>
+    <div class="bottom-links">
+
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="#">About Heart</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/sangam_3217?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D "><i class="fab fa-instagram"></i></a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

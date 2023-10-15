@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #a3d1d1;
+}
+ 
+
+/* CSS for header */
+.header {
+  display: flex;
+  /* position: fixed; */
+  top: 0%;
+  left: 0%;
+  height: 80px;
+  width: 1550px;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  background-color: #fff;
+  /* background-image: linear-gradient(to right,#4d174d,#4d174d); */
+}
+
+.header .logo {
+  display: flex;
+  height: 70px;
+  width: 100px;
+  margin-left: 30px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #000000;
+  height: 20px;
+
+  font-weight:bolder;
+  margin-right: 80px;
+  /* padding: 35px 20px; */
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 10px;
+    height: 400px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),url(images/heartrate.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.vectorstock.com/i/1000x1000/24/57/healthy-human-heart-beats-3d-medicine-model-low-vector-38102457.webp );
+  }
+  
+  
+  .intro h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  .intro p {
+    font-size: 20px;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  
+  
+  
+  .intro button {
+    background-color: #5edaf0;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+  }
+  .container{
+    margin-left: 380px;
+    margin-top: 100px;
+    background-image: linear-gradient(to right,#59555a,#969395);
+    max-width: 700px;
+    padding: 28px;
+    /* margin:30px 300px; */
+    height:45vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 15px 20px #065964;
+     
+} 
+
+ 
+h2{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center  ;
+    color: #393737;
+    padding-bottom: 8px;
+    border-bottom: 2px rgb(78, 69, 69);
+}
+
+.content{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding-bottom: 15px;
+    padding: 20px 0;
+    width:95%; 
+    
+}
+
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100px; */
+    padding-bottom: 15px;
+}
+
+ .input-box:nth-child(2n){
+ justify-content: end;
+}
+
+.input-box label{
+    width: 150px ;
+    color: #ffffff;
+    font-weight: bold  ;
+}
+
+
+
+label {
+    display: block;
+    align-content: 0px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+  position:absolute;
+  left: 80px;
+   
+    background-color: #007bff;
+    color: #fff;
+    margin: 20px 600px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.vertical-line {
+  width: 1px; /* Adjust the width of the line as needed */
+  height: 40vh; /* This sets the line to the full height of the viewport */
+  background-color: #000; /* Line color */
+  position: fixed; /* Position it wherever you want */
+  left: 100%; /* Adjust the left position to center the line */
+  top: 60%; /* Adjust the top position if necessary */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+.about{
+  font-size: 50px;
+  position: relative;
+  left: 37%;
+  top: 50%;
+}
+.about-me {
+    display: flex;
+    justify-content: 60px;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .about-me img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    }
+    .about-me button {
+      font-weight: 50px;
+      background-color: #110404;
+      padding: 10px;
+      border-radius: 50%; /* Makes the button round */
+      outline: none; 
+      color: #110404;
+    }
+    .about-me button a{
+      color: rgb(241, 235, 235);
+    }
+
+  .about-me-text h2 {
+    font-size: 50px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .about-me-text p {
+    font-size: 20px;
+    color: #09f330;
+    margin: 10px 0;
+  }
+  .about-me-text a {
+    text-decoration: none;
+    color: red;
+    padding: 40px 20px;
+  }
+  .about-me1 {
+    display: flex;
+    justify-content: 60px;
+    align-items: center;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .about-me1 img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .about-me1 button {
+    font-weight: 50px;
+    background-color: #110404;
+    padding: 10px;
+    border-radius: 50%; /* Makes the button round */
+    outline: none; 
+    color: #110404;
+  }
+  .about-me1 button a{
+    color: rgb(241, 235, 235);
+  }
+
+  .about-me1-text h2 {
+    font-size: 20px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 40px;
+    justify-content: 40px;
+
+  }
+
+  .about-me1-text p {
+    font-size: 20px;
+    color: #0c0c0c;
+    margin: 10px 0;
+  }
+  .about-me1-text a {
+    text-decoration: none;
+    color: red;
+    padding: 40px 20px;
+  }
+  .about-me2 {
+    display: flex;
+    justify-content: 60px;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .about-me2 img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .about-me2 button {
+    font-weight: 50px;
+    background-color: #110404;
+    padding: 10px;
+    border-radius: 50%; /* Makes the button round */
+    outline: none; 
+    color: #110404;
+  }
+  .about-me2 button a{
+    color: rgb(241, 235, 235);
+  }
+
+  .about-me2-text h2 {
+    font-size: 50px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .about-me2-text p {
+    font-size: 20px;
+    color: #585858;
+    margin: 10px 0;
+  }
+  .about-me2-text a {
+    text-decoration: none;
+    color: red;
+    padding: 40px 20px;
+  }
+  .about-me3 {
+    display: flex;
+    justify-content: 60px;
+    align-items: center;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .about-me3 img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .about-me3 button {
+    font-weight: 50px;
+    background-color: #110404;
+    padding: 10px;
+    border-radius: 50%; /* Makes the button round */
+    outline: none; 
+    color: #110404;
+  }
+  .about-me3 button a{
+    color: rgb(241, 235, 235);
+  }
+
+  .about-me3-text h2 {
+    font-size: 50px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .about-me3-text p {
+    font-size: 20px;
+    color: #585858;
+    margin: 10px 0;
+  }
+  .about-me3-text a {
+    text-decoration: none;
+    color: red;
+    padding: 40px 20px;
+  }
+  .about-me4 {
+    display: flex;
+    justify-content: 60px;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .about-me4 img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .about-me4 button {
+    font-weight: 50px;
+    background-color: #110404;
+    padding: 10px;
+    border-radius: 50%; /* Makes the button round */
+    outline: none; 
+    color: #110404;
+  }
+  .about-me4 button a{
+    color: rgb(241, 235, 235);
+  }
+  .about-me4-text h2 {
+    font-size: 50px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .about-me4-text p {
+    font-size: 20px;
+    color: #585858;
+    margin: 10px 0;
+  }
+  .about-me4-text a {
+    text-decoration: none;
+    color: red;
+    padding: 40px 20px;
+  }
+  .about-me5 {
+    display: flex;
+    justify-content: 60px;
+    align-items: center;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+  }
+
+  .about-me5 img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .about-me5 button {
+    font-weight: 50px;
+    background-color: #110404;
+    padding: 10px;
+    border-radius: 50%; /* Makes the button round */
+    outline: none;
+    color: #110404;
+  }
+  .about-me5 button a{
+    color: rgb(241, 235, 235);
+  }
+
+  .about-me5-text h2 {
+    font-size: 50px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .about-me5-text p {
+    font-size: 20px;
+    color: #585858;
+    margin: 10px 0;
+  }
+  .about-me5-text a {
+    text-decoration: none;
+    color: red;
+    padding: 40px 20px;
+  }
+button {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 10em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+ }
+ 
+ button:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ button:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ button:disabled {
+  cursor: auto;
+  color: grey;
+ }

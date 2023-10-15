@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login form</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/userlogin.css')}}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+  <script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById("password");
+      const eyeIcon = document.getElementById("toggle-password");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.add("bxs-hide");
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("bxs-hide");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="backgroud-1">
+  <img src="https://t3.ftcdn.net/jpg/04/87/69/28/360_F_487692869_V8MZ1hLvhXQZKT50EV8Sh13AkdibGJb3.jpg "
+             alt="GeeksforGeeks logo"
+             width="100%"
+             height="750"
+ ></a>
+    
+  </div>
+
+  <div class="wrapper">
+    <form method="POST"action="/login_validation">
+      <h1>Login for User</h1>
+
+      <div class="input-box">
+        <label for="email">Email :    </label>
+        <input type="email" placeholder="email" name="email" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+     
+
+        <label for="password">Password :</label>
+        <input type="password"  placeholder="password" name="password" required>
+        <i class='bx bxs-lock-alt'></i>
+        <i class='bx bx-hide' id="toggle-password" onclick="togglePasswordVisibility()"></i>
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox"> remember me</label>
+        <a href="#"> forgot password</a>
+      </div>
+
+      <button type="submit" class="btn"><span>Login</span></button>
+
+      <div class="register-link">
+        <p>dont have an account?
+          <a href="/userregister">Register</a></p>
+
+          <p>login with opt
+            <a href="/userlogin_otp">login</a></p>
+      </div>
+
+      
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-success">
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endwith %}
+  </div>
+
+</body>
+</html>

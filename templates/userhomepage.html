@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/userhomepage.css')}}">
+    <title>Heart disease prediction</title>
+</head>
+<body>
+
+    <header class="header">
+        <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">   
+        <nav class="nav-items">
+          <a href="/">Logout</a>
+          <a href="/getappoinment">Doctor</a>
+          <a href="#">About</a>
+        </nav>
+      </header>
+      
+    <div class="container">
+
+        <h1>Input Your Heart Data</h1>
+        <form method="POST" action="/predict_data" id="heartDiseaseForm">
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age" required min="0" max="100">
+            
+            <label for="gender">Gender: </label>
+            <select id="gender" name="gender" required>
+                <option value=1>Male</option>
+                <option value=0>Female</option>
+                <option value=0>Transgender</option>
+            </select>  
+
+
+            <label for="cp">chest Pain Type: </label>
+            <select id="cp" name="cp" required>
+            <option value=0>Typical Agina</option>
+            <option value=1>Atypical Agina</option>
+            <option value=2>Non-Anginal Pain</option>
+            <option value=3>Asymptomatic</option>
+            </select>
+
+            <label for="trestbps">Blood Pressure: </label>
+            <input type="number" id="trestbps" name="trestbps" required min='0'>
+            
+            <label for="chol">cholestoral: </label>
+            <input type="number" id="chol" name="chol" required min='0'>
+
+            <label for="fbs">Blood sugar</label>
+            <select id="fbs" name="fbs" required>
+                <option value=0>Fasting Blood Sugar <120 mg/dl </option>
+                <option value=1>Fasting Blood Sugar >120 mg/dl</option>
+            </select>
+
+            <label for="restecg">restecg</label>
+            <select id="restecg" name="restecg" required>
+                <option value=0>0 (normal)</option>
+                <option value=1>1 (having ST-T)</option>
+                <option value=2>2 (left ventricular hypertrophy)</option>
+            </select>
+
+            <label for="thalach">thalach</label>
+            <input type="number" id="thalach" name="thalach" required min='0'>
+
+            <label for="exang">exang</label>
+            <select id="exang" name="exang" required>
+            <option value=1>1 (yes)</option>
+            <option value=0>0 (no)</option>
+            </select>
+
+            <label for="oldpeak">oldpeak:</label>
+            <input type="text" id="oldpeak" name="oldpeak" required pattern="\d+(\.\d+)?" title="Enter a valid float value (e.g., 1.5)" >
+
+            <label for="slope">slope:</label>
+            <input type="number" id="slope" name="slope" required min='0'>
+
+            <label for="ca">ca:</label>
+            <select id="ca" name="ca" required>
+                <option value=0>0 </option>
+                <option value=1>1</option>
+                <option value=2>2 </option>
+                <option value=3>3</option>
+            </select>
+
+            <label for="thal">thal:</label>
+            <select id="thal" name="thal" required>
+                <option value=1>1 (no blood flow in some part of body)</option>
+                <option value=2>2 (normal blood flow)</option>
+                <option value=3>3 (blood flow is obeserved but it is not normal)</option>
+            </select>
+            
+
+            <label for="Smoking Habbit">Smoking Habbit:</label>
+            <select id="smoking habbit" name="smoking habbit" required>
+                <option value=1>Yes</option>
+                <option value=0>no</option>
+            </select>
+
+            <label for="From Last">From last:</label>
+            <select id="from last" name="from last" required>
+                <option value="1">1 year</option>
+                <option value="2">2 year</option>
+                <option value="3">3 year</option>
+                <option value="4">4 year</option>
+                <option value="5">5 year</option>
+            </select>
+
+            <label for="gender"></label>
+
+            <!-- Add more input fields for relevant information -->
+
+            <button type="submit">Predict</button>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-success">
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>

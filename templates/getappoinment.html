@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Care Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/getappoinment.css')}}">
+</head>
+<body>
+  <header class="header">
+    <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"> 
+    <nav class="nav-items">
+      <a href="/">log out</a>
+    </nav>
+  </header>
+
+    <main>
+
+        <div class="intro">
+          <h1>Heart Care For You</h1>
+          <p>Your Heartcare is What We Do.</p>
+          
+        </div>
+
+        <div class="container">
+            <form action="searchdoctor1" method="POST">
+                <h2>Search Doctor</h2>
+                <div class="content"> 
+                    
+                    <div class="input-box">
+                      <label for="specialty">Select Specialty:</label>
+                      <select id="specialty" name="specialty" required>
+                          <option value="cardialogist">cardialogist</option>
+                          <option value="gastrologist">gastrologist</option>
+                          <option value="Dermatologist">Dermatologist</option>
+                          <option value="Pediatrician">Pediatrician</option>
+                          <option value="General surgery">General surgery</option>
+                          <!-- Add more specialties here -->
+                      </select>
+                    </div>
+    
+                    <div class="input-box">
+                      <label for="location">Enter City:</label>
+                      <input type="text" id="location" name="City" placeholder="City" required>
+                    </div>
+                </div>
+
+                <button type="submit">Search</button>
+
+                          {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                          <div class="alert alert-success">
+                              <ul>
+                                  {% for message in messages %}
+                                      <li>{{ message }}</li>
+                                  {% endfor %}
+                              </ul>
+                          </div>
+                      {% endif %}
+                  {% endwith %}
+            </form>
+            
+        </div>
+                    
+                    
+
+                </form>
+            </section>
+            <h2>** Kindely Note or Remember the Doctor ID **</h2>
+
+            <div class="about">
+              Top Doctors 
+            </div>
+           
+              
+            
+            <div class="about-me">
+              <img src="https://images.rawpixel.com/image_200/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L2pvYjczOC1nZy0yNi5qcGc.jpg" alt="">              <div class="about-me1-text">
+                <p value='Dr. Natalie Brathwaite' name='dr_name'>Dr. Natalie Brathwaite, MD</p>
+                <p>Neurologists </p>
+                <p>ID 111 </p>
+                <p>tirupati Nagar</p>
+                <p>8668989872</p>
+              </div>
+              </div>
+
+              <div class="about-me1">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/008/957/225/small/female-doctor-avatar-clipart-icon-in-flat-design-vector.jpg" alt="">                <div class="about-me1-text">
+                  <p>Dr. Lawrence Rowley, MD</p>
+                  <p>Cardiologist </p>
+                  <p>ID 954 </p>
+                  <p> rajindra Nagar</p>
+                  <p>8668989872</p>
+                </div>
+                </div>
+
+                <div class="about-me2">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGiloF4AwZL3G-ZLbe7ryp27TA9rJltt-d0OQuDg&s" alt="">
+                    <div class="about-me1-text">
+                    <p>Dr.Aman Romres, MD</p>
+                    <p>Dentist</p>
+                    <p>ID 104 </p>
+                    <p>Sambhaji Nagar</p>
+                    <p>8668989872</p>
+                  </div>
+                  </div>
+
+                  <div class="about-me3">
+                    <img src="https://img.freepik.com/free-photo/female-doctor-hospital-with-stethoscope_23-2148827776.jpg" alt="">                    <div class="about-me1-text">
+                      <p>Dr. Sheri Campbell, MD</p>
+                      <p>Cardiologist </p>
+                      <p>ID 248 </p>
+                      <p>hanuman Nagar</p>
+                      <p>8668989872</p>
+                    </div>
+                    </div>
+      
+                    <div class="about-me4">
+                      <img src="https://thumbs.dreamstime.com/b/indian-doctor-mature-male-medical-standing-isolated-white-background-handsome-model-portrait-31871541.jpg" alt="">
+                      <div class="about-me1-text">
+                        <p> Dr. Saleem Malik, MD</p>
+                        <p>Dermatology </p>
+                        <p>ID 136 </p>
+                        <p>samarth Nagar</p>
+                        <p>8668989872</p>
+                      </div>
+                      </div>
+      
+                      <div class="about-me5">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwGiloF4AwZL3G-ZLbe7ryp27TA9rJltt-d0OQuDg&s" alt="">                        <div class="about-me1-text">
+                          <p>Dr. Kimberly Kuncl, MD</p>
+                          <p>Gynecology, </p>
+                          <p>ID 121 </p>
+                          <p>kalam Nagar</p>
+                          <p>8668989872</p>
+                        </div>
+                        </div>
+             
+    </main>
+
+    
+</body>
+</html>

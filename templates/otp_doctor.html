@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/verify.css')}}">
+</head>
+<body>
+  <div class="verification-container">
+    <form method="POST" action="/otp_verification_doctor">
+      <h2>Email Verification doctor</h2>
+      <input class="verification-input" type="number" placeholder="Enter verification code" name="doctor_otp" required>
+      <button type="submit" class="verify-button">Verify</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+  </div>
+</body>
+</html>

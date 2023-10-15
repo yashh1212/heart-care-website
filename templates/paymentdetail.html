@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Care Website</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/paymentdetail.css')}}">
+
+</head>
+
+<body>
+
+        <div class="container">
+            <h2> Appointment is confirmed</h2>
+            <h2></h2>
+
+            <div class="formbold-form-wrapper">
+
+                  <div class="formbold-mb-5">
+                    <label for="name" class="formbold-form-label"> Your Name : {{ pt_name }}</label>
+                  </div>
+
+                    <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Doctor ID :  {{Dr_id }}</label>
+
+                      </div>
+
+                      <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Doctor Name :  {{ Dr_name }}</label>
+
+                      </div>
+
+
+                      <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Hospital Location :  {{ hospital_address }}</label>
+
+                      </div>
+
+                      <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Appoinment Date :  {{ Appoinment_date }}</label>
+
+                      </div>
+                      <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Appoinment ID :  {{ appointment_id }}</label>
+
+                      </div>
+
+                      <div class="formbold-mb-5">
+                        <label for="name" class="formbold-form-label">Appoinment Time :{{ Appoinment_time }} </label>
+                      </div>
+
+                  </div>
+                    <button><a href="/download" id="reset-button" style="text-decoration: none; color: inherit;">Download PDF</a></button>
+
+                  </div>
+
+
+<header class="header">
+  <nav class="nav-items">
+  <a href="/">log out</a>
+  </nav>
+  </header>
+
+
+  <script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+
+    // Add a click event listener to the "Reset Session" button
+    $('#reset-button').click(function() {
+        $.ajax({
+            type: 'POST',
+            url: '/reset',
+            success: function(data) {
+                if (data.status === 'Session reset successfully') {
+                    alert('Session has been reset.');
+                    // Optionally, reload the page after resetting the session
+                    location.reload();
+                }
+            },
+            error: function(error) {
+                console.error('Error resetting session:', error);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

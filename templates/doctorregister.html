@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/doctorregister.css')}}">
+    <title>registration</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form method="POST"action="/add_doctor">
+            
+            <h2>REGISTRATION</h2>
+            <div class="content"> 
+                <div class="input-box">
+                    <label for="Fullname ">Fullname :</label>
+                    <input type="text" placeholder="Firstname" name='f_name' required> 
+                </div>
+
+
+                <div class="input-box">
+                    <label for="Email">Email :</label>
+                    <input type="email" placeholder="Email" name='d_email' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="phonenumber">Mobile No :</label>
+                    <input type="phonenumber" placeholder="Mobile No" name='d_number' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="years of experiece">years of experiece :</label>
+                    <input type="years of experiece" placeholder="years of experiece" name='yoe' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="Qualification">Qualification:</label>
+                    <input type="Qualification" placeholder="Qualification" name='qualification' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="Specialist ">Specialist :</label>
+                    <input type="Specialist " placeholder="Specialist " name='specialist' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="City">City :</label>
+                    <input type="City" placeholder="City" name='city' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Password :</label>
+                    <input type="password" placeholder="Password" name='password' required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">confirm password :</label>
+                    <input type="password" placeholder="Confirm Password" name='c_pass' required>
+                </div>    
+                <div class="input-box">
+                    <label for="hospital_name"> Hospital Name :</label>
+                    <input type="text" placeholder="hospital_name" name='hospital_name' required>
+                </div>    
+                <div class="input-box">
+                    <label for="hospital_address"> hospital Address :</label>
+                    <input type="text" placeholder="hospital_address" name='hospital_address' required>
+                </div>    
+                <div class="input-box">
+                    <label for="hospital_address"></label>
+                </div>    
+
+                <span class="gender-title">Gender :</span>
+                <div class="gender">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="transgender">
+                        Transgender
+                    </label>
+                </div>
+                <div class="button">
+                    <button type="submit">Register</button>
+                </div>
+                <div class="register-link">
+                    <p2>if already have account...
+                        <a href="/doctorlogin">Log in</a></p2>
+                </div>
+                
+            </div>
+
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success">
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

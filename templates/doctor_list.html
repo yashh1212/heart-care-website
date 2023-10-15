@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Care Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/doctorhomepage1.css')}}">
+</head>
+<body>
+    <header class="header">
+      <a class="logo"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAREBAPEBAVDxAPGBUQEBAQFw8SFREXFRUXGBUVFRgYHiggGBolGxcWITEiJSkrOi4uGB8zODMtOCgtLisBCgoKDg0OGhAQGy0mHyY3Ky0tLy8tKzcvLS03LS0tLy01Ly03LS0wLi0tMistLS0tLS0uLS0vLS0tLS0tLS0vLf/AABEIALwBDAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABQIDBAYHAQj/xABEEAACAQIBCAQJCgYBBQAAAAAAAQIDEQQFBhIhMUFRkVJhgbEHExYicZKhwdEUFSMyQlNicqKyM1SCwtLh8CRDk6Pi/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAUGAQMEAgcI/8QAPxEAAQMCAgYGBwYFBQEAAAAAAQACAwQRBSESMUFRYZEGE3GBodEVIlKSscHwFDJCouHxFiNTYrIHQ3LC0iT/2gAMAwEAAhEDEQA/AO4gAIgACIAAiAAIgACIAAiAHjCLS89cuVqVSFGlNw1aU5RtdttpK+7Z7SZzVylLEYdSqa5xbjJ7NK2x8mjRs7a2ljKvCNkuyK99zYvB5V+jqR4NPmS08DW0bXAZ5Hn+4Vepat78TkYXHR9YAbMv2K3MAESrCgACIAAiAAIgACIAAiAAIgACIAAiAAIgACIAAiAAIgNBzs8I+HwrlSw1sTWV03f6KD62vrPqXNHMMtZ147FOXja8lB/9qLdOFuFlt9pzyVDW5DNStJg884DneqOOvuGvnZd4xecGCpXVTF0YSW2PjIaXJO5h+W2TNnyun+v4Hz2k+LKkjQat24KWb0fh2vPh+q+kMHl3B1XaniqM5P7KnDS5XuSM9jPmBJ8WbBm/nLjaEoU6Vdum2oeKqXlCzdtUX9Xsse2VRJsRrWifANFpdG/VvHfrHl3qeyrV061WXSk332Nk8HVS1StHiovk38TUP9my5h1LYhrpR7v+MuVay1O5o2AeBC+R4XLpVrJN5J5g+a6SACsq8IDEx+OpUKbq1pxp047ZSdl1LrfUcxzj8J1STlTwUfFx2eOmlKUuuK2L29hrklbHrXZSUM1Uf5Yy2k6h9bhcrqeIrwhFynJQitsptRS7WROJztydDVLGUv6ZKf7bnBMdjq1eWnXqzqvpSnObXovsXUjFaOU1Z2BTkfR1lv5kh7h5+S+gaeeeTZOyxlJfmbj7WkSuEx9Gsr0qtOr105Qn3M+ZmKVWcJKcJyjKOtSg3GS9DWtAVZ2hZk6Px29R57wD8LL6kBw3N/wlYzD2jXfyumum/PS6p7+251jN7OTDY6GnQndq2nTlqnC/Sj71ddZ0xzNfq1qEq8Onps3C7d41fp3qaABtXCgACIAAiAAIgACIAAiAAIhyXwl58ybngsJO0VeFerHbN7HCD3RW979my99q8JOcPyPByUJaNavelTa2xVvPmvQrLqckcHXE5KiW3qjvU/g1A2T+fIMh90cd/ds433Ii4keRRcSOFWqyJHqR6kVJBe14kZmSV9NB9H6T1Xf3GOkSeQ6V5Te6MXzvFLvOqhZp1MbeI5XuVGY7MYMNqJBrDH27SCB4kKWnO2j+KpCHrTSJrNSto4yi27Jtx19adlzsa5lGqoqm+FWm+yK/2jJrX0ajTacYzkmtTTSvddd0XSWTTE0e5vxaSvidPTdX9jlOWm858Gva3wzXcEYWVMo0sNRnWqy0YQV3xb3Rit7b1JEXmVl35ZhYzl/GpfRVlxklqkuqS1+m63HO/CPnE8TXeHg/oKDcdWydRapT7NaXa95U5Jw1geNupfR6TDJJaowPy0fvfp27OepQ+dWclbHVdKb0aUW/F0ovzYri+Le98tRBNFyx5YjC4k3KvEcbI2hjBYDUFaaKWi80UtBZsrLRQ0XmiloysKw0ZOSspVsLVjWoTcJw2Nb1vjJb4vgyy0UNGRktTmgix1L6EzOzmp5QoeMjaFWnaNal0JNbV+F2dn6VuNjPnHM/LssDi6dZN+Lfm1or7UJvzu1amutH0VTmpJSTupJNNbGnsZJQSabc9YVKxOiFLL6v3TmOG8d3wIVwAG5RqAAIgACIAAiAAIgACLhnhcyi6uUHRT1YaMIJbtKScpP0+fFf0mlpExnlNyyjjG/v6sfVnJLuIqKImR2k4lfQKOMRwMaNgHmfivUitI8ii4keF2BEitIJFSRhekSJfIcWoyl0rR7NvuRFWJ7JUbUVx0nLs0Y27iVwRmlWNO4E+Fvmqr02mMeDyNH4ixv5g4+DSsLL2p0kvz9jv7oslt3VKP74kLlWo5VEn9iMbd/e2TFGV4079CmnysydoJA+vqG8W/l9VUTHab7PgOHSgZgOPvgSfELFzcy/UwfyjQ21oSprXo6Mr+bU9MbvmQ9tdy9iaejOceDfey3YphuPVOxfZmhjiZWj71j25ZchkqbFLRXY8aML1ZW2iloutFDRlYVtooaLrRQ0ZXlW5ItyRdaKJIyvBVmR33wa5RdfJuHbd5Ub0Jf0fV/Q4nBJI7B4Faj+SYiG5VFJf1U4r+1HTTGz1CY4wOptLcR5LowAJBU9AAEQABEAARAAEQABF8454U3HKOMT316r9acmvYyKijb/AArYDxWUZz3V4U6i5aL9sXzNRiRDxZxC+hUj9OBjt4HwVaK4opiXInhdgXqK0jxGTQwlSeuMG9+qLtbjdIAEmwFyjnNY0ucbAaycgO85K0T+EpaMKafCK9bZ3kPVwdSDWlBq7T2Pjtu1sJ3Yo8IRX6F/osXR2O00jnZWAHM3+S+d/wColQHUdPGw30nOcLajot0cu96g8c71asvxSj7WSmTXelB7krdqfwaIWLvpX4tPtdyZyX/BS4Sa/TH4mnA5i6tc72g4+IK6+nFGGYLGwf7bmDkxzFH5RX0tTrk3zk2WDJx8LT/MomPYiq1mhUSN3Od8cvBW3Bpuuw6nk3sjPfoC68KWipoHMpFW2iqhQc2ox49er09oZK5Jo2jKfSvFLhFJe+3tOuhpTUzti2beA2+XaVD47igwyhkqSLkZNG9xyA7Np4AqmWSIWtpO+y/2b8r7d/Ah8RScZODVmrp34J2NkjWTnoJ+coqo+pOVv8eaI3LdDZNLZ5j9Ku78v2sm8Uw2FkHWwC2ibOzJ4HXtB3bLqldF+ktbNW/Za91+sGkwkAWNtIAWAGi5t7X1G1syoZotyLrKGVtfRirMkdi8C9G2Erz6VXR9WEX/AHHH5HePBpgHRybQTVnV0q0v6n5v6VE6aUXkUJjrw2ltvI81tYAJFU5AAEQABEBAZz5d+SRhaCnOo3optpJRtdu23atRrvl5X+5p85fE64aKaVuk0ZdoUfPidNA8xvdmOB7fgugg595eV/uafOXxHl5X+5p85fE2ejajcOYWn03R+0eRXQQc+8vK/wBzT5y+I8vK/wBzT5y+I9G1G4cwnpuj9o8iqfDBkrxmGpYqKvKhLRl+Seq/ZJL1mchidYyjndUr0alGpQi4VYunL617SVrrrNK+aaPRn/6/gcc2DVT3XaBzVjwvphhsEHVzOdkTazXHI57t9+fBQES4ieWSqPRnzj8D35spdGfOPwNPoOs3D3gpQdN8H9t3uO8lH5Lwmm7vVGOt7tLZdL/m7qJmpOMFpSahFeb0Y+hcXYUaUYRUYqVk9+i3e1t3/NZA5Tq+NqOP2Kd4pcXd6UufsRKMDcKpdMgGR31a+4DmfCrTvl6V4p1LHEU8eY+GlY/iebgXB0Wg5XBBn6c1KN01OLW681qXsdn7SjFTtCo728ySv1vUv3EFgq3iJt7YT1SW212rtdaM/HY+nKDjGV5Sd9Tf1de136lqNrMWilpXyGweARbaTY6Nr5kbhsz2Zrkl6KVVJisFO0OdCXtcHWNgNIF97ZA6LdeWlYW1WGDFbfSSOS5XUlwlfnGxHxM/I+2ouC0uTXxIDBnaNYzjcflKv/TKLrMFn3jRdye0nwuqsrrXS/Kl+qaI8z8qa1F/ia5L/wCmYdNXkkuzmeMXZoVkg4g8wFt6IyiTBad24Ee65zfkr1PAzkr6lwUr+dv1W9xiyjueo2BWsls0bJPqWoj8q0dlRa3sn6Xdu/C656zuxHBhTQCRhJItpauYtbIHLx33hOj3TI4lXOppmhrXXMdr3yz0XXJuS25uLZ3Fswo212lxaRP046MUl9mKT6rfWfZr5EVk2F6kXa8YWk+vWnYzsp1XGnOS33pr+pNv2XXabsDAhilqnbMuXrHnlyK4unMjqyrpMLjObjpHtcdBp3ZDTJ4eMRTxX/UeOeqMpNSXBOWx+hMncTSUoSi96biuMkno9/tNblHne5M5HxenDRb86mtFp7bK1pe7lxM4LUCXrKaXPTue0n73fax7jvWOmmHOpeoxGlFjFot7ADdh7Gn1T/yA1KDlBptWerVsLTi+D5M3CUYu9qcbWu7wjfXt3FOivu4f+OPwMfw5N7Y5Fej/AKjUX9F3vN+vh2BazknJ0sRiKNCKelVlGN+CcvOl2K77D6Pw1CNOEKcFowpxUIrgoqyXI43hpunNVKaVOaulOEVGSurOzSvsM358xf8AMVPXn8TogwKSO93DkVEYn0zp6wt0Y3AC+1us7da68DkPz5i/5mp68/iPnzF/zNT15/E3+iH+0ORUX/EcHsHm3zXXgch+fMX/ADNT15/EfPmL/mKnrz+I9EP9ocin8RwewebfNdeByjB5exiqRcas5u6WhJys9e9dZ1WErpPicVVSOpyA43v9bVJUOIR1gcWAi1tfH6z/AFUJnJkj5RFfh1rqNa8kZdFHQgamTysFmuIHauiSlgldpSMBPEBc98kZdFDyRl0UdCB7+1z+2eZWv0fSf0m+6Fz3yRl0UPJGXRR0ID7XP7Z5lPR9J/Sb7oXPfJGXRRC52ZCxOHo/KKMYyjT/AIkWpSdn9pWexb+p33HXC3VpqScZJSjJOMk9aaepprgYNVORbTPMr3HRUjXAmFpG6wzXzgst4joUuUv8ir56r9Cnyl/kTOfObTwOIvFN0Kt50pbdHjBvivardZryI52I1jTYyHmrnD0cweVgkZAwg6vVCyJZVxElbzY33qLT7G5FuEdWv0lKLiOWeplnIMjibb1L0OG0tECKeMNvrsAL7r9n7a1VY8hTS2HqKjnUhYa16ZmTKnnyXSjJe1P3GGi9gv40F0tXrajroH6FVEf7m+JAPgorH4utwupYPYfzDSR4gKQyjD6PS4SX7X8DCwD+lp9TUuUkZ2Uf4UlwafqrR95iZLp6UpPowb52X9zJjEIi7FI279A918/gVT+jtb1XRaoeNbOuHeRpD/ILPxVZU4ubV43Sb6m1f2KXMrnFSi7u8Wm42tv1xfL3mJld/RaPGWv+mMvczDyflBQ+jqal9iet8LKXUSk9dG2qdTTfdIHM3vftvr2KqUeA1DsLjxKjv1jHuNhrs2wBA2lrgTb8QJ12AMjgcK6alfbdwt1arvtduTMLLNTXTgtaspy9L1ftSfaZWJyjTgr6am9yhJSb+BCzqucpTltm3bbZa9i7iNxGWKmpG0kTrk69Wq987bzbLcLarKydHaWsxPF34rVxloH3QQQL2DQADnZrb3PtHtt4yxVp3d05K2xq6a7S+y2ytg2X0lzQ4WKst1PvZc5/EzMh5MxGLxFPD06krzla+lNqMVrlJ69iXw3mO1fVxO0eD3Nj5HRVWrG2JrLz+NOG2NP07G+vVuOqEyPda5UNiTqekh0tEaRyaLbfIaz3Dar+GzQp04RpqTaglG8tbdt7fFl7yWhx7zZQSVyqSc1rXktDj3jyWhx7zZQLnei1ryWhx7x5LQ495soFzvRa/hc24QkpcCehGyS4FQMIgACIAAiAAIgACKLy9kmni6E6FVapa4yW2ElsnHrXt1recJy5kerhK86FVWtrjJbJJ/VlHqduaa3H0Ua/nZm7Sx1HQl5tSN3SqW+q3ufGL1XXbuOeoh0xca1L4TiZpX6D/uHwO/z8wuDouIu5SwNXD1Z0asNGcHaSfsae9PcywmRhFleGkEXGpVoqRSmepmF7VZewcrVaT64Pk0zHuG7OPpS5O56a7QcHbs/FeJY+sjdHvBHMWU7iYXjNPov2NP8AtMTI7tpvj5vdfuRItapfijP9UWYWS4eY3xk/2r4l1qog7E4XcHeF/wD14r4phdUY+jFZHtL4/wA2gD4NKtZXdnBcW37u9MjZxT2mfleV5wW7RXtcr+xmC2VnFnaVbIeIHIAfJfTOicIjwanbvBd7zi74EK0qMVuK2Gzxsj1YLAalSyhlTZu+YGZrxEo4rERth4u8IPbVa/tT28uJ6YwvNguepqY6eMySHIePAcf3OQUh4Nc0NccfiI/ioQktr3VWuHR58DqBTGNtS1JakkVErHGGNsFQayrfVSmR/cNw3eZ2nNAAbFyoAAiAAIgACIAAiAAIgACIAAiAAItdzszYpY6lou0K0U/FVbbNvmy4xfs2o4plPJ1XDVZUa0HGcdq3NbpRe9PifRpB5yZu0MdSdOotGav4urFLSg33xe9dzszmng0/Wbr+KmsLxY0x6uTNni3iOG8cuPBUytMzsv5DrYKo6VaPXGcdLRmukpd63EcmRpBBsVdGPa9oc03B1FV3D180U3PWzBGS2A2N1skHeMHxhT9sYlrAR0YaP4pPm1/iU5OnenT/ACpcr/AyIQts6Unzm37z6HEwSGKX+0/m0D8rr881kxphV0u+QcmGYfEt5KDyi/pWuiorttZli5cyhK9aq+Ln+7/RjtlEqnac8jt7nHxK+7YXD1NDBF7LGDk0BVNlDZ5fgdGzHzE0tHE4yPm/Wp4eWpy4SqcF+Hfv4PWxjnmzVuqquKmj05D2bzwH1YbVg5iZkyxDjicTFww61wg7p1fhHr5cTrlKmopRilGMUlGKSSSWxJbkVQikkkrJakluKiUiiEYsFRK6ukq5NJ+oahsHmd529lgAANi4kAARAAEQABEAARAAEQABEAARAAEQABEAARR+V8l0cVSdGvBSg9a3OL3Si9zXE47nbmhWwMtNfS4eTtGole19kZr7L69j9h3Is16UZxlCcVKMk4yjJJqSe1NPajTLCJO1SNBiUtG7LNp1j5jcV823PbnRc8PB41etgU5LXKVDU5Lrpt7fyvXwvsObyVm01ZrU09TTW1PgyNfG5hsVdaWriqWacR7RtHb9W3FbBkdfQL8zj+lP3mXL3rvI3Ic/McejO/OC/wASSqytGb4RnLlFl7w2T/5I3bgPDL5L4X0kpycXqYh+J/8AlY/9lrE6l3J8W/Y7leGw86k406cXOcnoxUVdyfUjPzczdxONm4UYeZF2nUldRhr3ve/Rr7zsmbWa+HwMLU1p1Wkp1pJaT6l0Y9S7blHhhdLns3r7XiGJw0Y0Bm7Y3z3DxPDWoXMzMWGG0a+KSqYha4x1SjSfHrmuOzhxN6AJJjGsFgqTU1MtQ/TkNz4DgPric0AB7WhAAEQABEAARAAEQABEAARAAEQABEAARAAEQABEAARDVM68zMPjU5pKjiFsqxStPqmt/p2r2G1g8uaHCxW2GeSF4fGbH68OC4XRyJXwlWrRrxs9U4S2xmk1G8Zb/relcCQybhI1qsKUr6FRuLtqbUlrV/Qbr4QKd6KlwffqNYzTp6WLpPhdexk5RWZQEX1B/wAz81WMXkdPjLZSLOcYybcLNvyaul5PwVOjTjSpQjCEF5sYqyX++syymOwqIVWMkk3KAALCAAIgACIAAiAAIgACIAAiAAIgACIAAiAAIgACIAAiAAIgACKDzqwLrUHFbdTXYa9mhkecK3jJp6lqT7zfJRT2lMaaWxWNzaiRsZjByK5n0kT5mzOHrN1Z/LhsVYANK6UAARAAEQABEAARAAEQABEAARf/2Q==" ></a>
+      <nav class="nav-items">
+        <a href="#">Profile</a>
+        <a href="/">log out</a>
+      </nav>
+    </header>
+  
+    <main>
+  
+      <div class="heart-rate">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="73px" viewBox="0 0 150 73" enable-background="new 0 0 150 73" xml:space="preserve">
+              <polyline fill="none" stroke="#009B9E" stroke-width="3" stroke-miterlimit="10" points="0,45.486 38.514,45.486 44.595,33.324 50.676,45.486 57.771,45.486 62.838,55.622 71.959,9 80.067,63.729 84.122,45.486 97.297,45.486 103.379,40.419 110.473,45.486 150,45.486"
+              />
+            </svg>
+            <div class="fade-in"></div>
+            <div class="fade-out"></div>
+        </div>
+  
+      
+        <div class="intro">
+        <h1>Heart Care For You</h1>
+        <img src=" " alt="">
+        <p>Your Heartcare is What We Do.</p>
+        </div >
+
+        <div class="intro1"> 
+          <h2>DOCTOR LIST</h2> 
+         </div> 
+
+      <div class="container">
+        <form action="/bookAppointment" method="POST">
+            <h2> </h2>
+            <div class="content"> 
+              <table class="table">
+                <tr  class="table_header">
+                    {% for name in headings %}
+                    <th class="table_cell">{{ name }}</th>
+                    {% endfor %}
+                </tr>
+                {% for row in data %}
+                    <tr class="table_row">
+                        {% for cell in row %}
+                        <td class="table_cell">{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+               </table>
+            </div>
+            <button type="submit" class="btn" href='/bookAppointment'>get Appointment</button>
+          </form>
+      </div>
+
+    </main>
+</body>
+
+</html>  

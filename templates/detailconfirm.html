@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Care Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/detailconfirm.css')}}">
+    
+</head>
+
+<body>
+
+    <main>
+      <header class="header">
+        <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+      <nav class="nav-items">
+      <a href="/">log out</a>
+      <a href="/bookAppointment">Another</a>
+      </nav>
+      </header>
+    
+        <div class="intro">
+          
+         <h2>  <label>Dear:{{ head_name }}</label>
+          <p>PLaese Confirm Your Details Below</p>  </h2>
+          <div class="message">
+           {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              <div class="alert alert-success">
+                  <ul>
+                      {% for message in messages %}
+                          <li>{{ message }}</li>
+                      {% endfor %}
+                  </ul>
+              </div>
+          {% endif %}
+      {% endwith %}</div>
+        </div>
+
+         
+             
+    </main>
+    
+    <hr>
+    <p>______________________________________________________________________________________________________________________________________________________ </p>
+    <hr> 
+    <h1 class="h1">Appoitment  Details    </h1><h2 class="datetime1" >Today Date and Time</h2>
+    
+    <div class="datetime" id="datetime">
+    <h2>.</h2>
+    <h1> </h1>
+
+    <h3>
+      <div class="datetime-container">
+       
+        
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const datetimeElement = document.getElementById("datetime");
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const formattedDateTime = now.toLocaleString('en-US', options);
+            datetimeElement.textContent = formattedDateTime;
+        }
+
+        setInterval(updateDateTime, 1000);
+
+        updateDateTime();
+    </script>
+    </h3>
+     <p>______________________________________________________________________________________________________________________________________________________</p>
+    <hr>
+
+    <div class="box">
+  
+
+<div class="formbold-main-wrapper">
+
+  <div class="para">
+    <p>Any changes in UHID can be done at Hospital/clinic</P>
+    </div>
+
+  <div class="para1">
+    <p>______________________________________________________</P>
+    </div>
+    
+  <div class="formbold-form-wrapper">
+
+      <div class="formbold-mb-5">
+        <label for="name" class="formbold-form-label"> First Name : {{ pt_firstname }}</label>
+      </div>
+
+      <div class="formbold-mb-5">
+        <label for="name" class="formbold-form-label"> Last Name : {{ pt_lastname }}</label>
+      </div>
+
+      <div class="formbold-mb-5">
+        <label for="phone" class="formbold-form-label"> Phone Number : {{ pt_phone }}</label>
+      </div>
+
+      <div class="formbold-mb-5">
+        <label for="email" class="formbold-form-label"> Email : {{ pt_email }}</label>
+      </div>
+       
+      <div class="formbold-mb-5">
+        <label for="date"> Birth Date: {{ DOB }}</label>
+
+      </div>
+
+      <div class="formbold-mb-5">
+        <label for="date"> Gender: {{ pt_gender }}</label>
+
+      </div>
+
+      <form action="/bookAppointment" method="POST">
+      <div>
+        <button class="button" href="/bookAppointment"> Edit</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="box1">
+  <div class="box2">
+    <img src=
+    "data:image/png;base64,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"
+             alt="GeeksforGeeks logo"
+             width="30"
+             height="30"
+             title="Logo of GeeksforGeeks" />
+ <p>Appointment Date</p>
+ <h2 class ="h2">{{ date }}</h2>
+  </div>
+   
+  <div class="box5">
+    <img src=
+    "data:image/png;base64,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"
+             alt="GeeksforGeeks logo"
+             width="25"
+             height="20"
+             title="Logo of GeeksforGeeks" />
+    <p>Appointment Time</p>
+    <h2 class ="h2">{{ app_time }}</h2>
+  </div>
+
+  <div class="box3">
+    <img src=
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRawU5Zu-_FFBXSOXE9Vn0leOb_o-vZQh__3A&usqp=CAU"
+             alt="GeeksforGeeks logo"
+             width="45"
+             height="45"
+             title="Logo of GeeksforGeeks" />
+             <p>Doctor</p>
+             <h2>{{ doctor_name }}</h2>
+  </div>
+
+  <div class="box4">
+    <img src=
+    "https://img.freepik.com/free-vector/destination-concept-international-travel-journey-red-pointer-with-grey-world-map-inside_333792-53.jpg?size=626&ext=jpg"
+             alt="GeeksforGeeks logo"
+             width="45"
+             height="37"
+             title="Logo of GeeksforGeeks" />
+    <p>Location</p>
+ <h2 class ="h2">{{ Address }},{{hospital}}</h2>
+
+  </div>
+  <div>
+
+  </div>
+</div>
+
+<div class="box7">
+  <button id="rzp-button1" class="formbold-btn">confirm Appoinment</button>
+</div>
+
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<form action="/detailconfirm" method="post"> 
+<script>
+  
+  let myVar = {{ order_id | default('undefined') }};
+  let name_pt = {{ pt_name | default('undefined') }};
+  let pt_phone = {{ pt_phone | default('undefined') }};
+  let email_pt = {{ email_pt | default('undefined') }};
+ 
+    
+  if (myVar !== 'undefined') {
+  
+  var options = {
+  
+      "key": "rzp_test_Od3RFiM9gwIvNj", // Enter the Key ID generated from the Dashboard
+      "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "currency": "INR",
+      "name": "Heart care", //your business name
+      "description": "Test Transaction",
+      "image": "https://example.com/your_logo",
+      "order_id": myVar, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      "handler": function (response){
+        alert("Payment successful!");
+        // Redirect to the success route
+        
+          alert(response.razorpay_payment_id);
+          let payment_id=response.razorpay_payment_id;
+          alert(response.razorpay_order_id);
+          alert(response.razorpay_signature)
+          window.location.href = '/success';
+      },
+
+      "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
+          "name": name_pt, //your customer's name
+          "email":email_pt, 
+          "contact": pt_phone  //Provide the customer's phone number for better conversion rates 
+      },
+      "notes": {
+          "address": "Razorpay Corporate Office"
+      },
+      "theme": {
+          "color": "#3399cc"
+      }
+  };
+  var rzp1 = new Razorpay(options);
+  rzp1.on('payment.failed', function (response){
+          alert(response.error.code);
+          alert(response.error.description);
+          alert(response.error.source);
+          alert(response.error.step);
+          alert(response.error.reason);
+          alert(response.error.metadata.order_id);
+          alert(response.error.metadata.payment_id);
+  });
+  document.getElementById('rzp-button1').onclick = function(e){
+      rzp1.open();
+      e.preventDefault();
+  }
+}
+  </script>
+  
+  
+</form>
+</body>
+</html>

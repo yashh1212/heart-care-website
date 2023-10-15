@@ -1,0 +1,100 @@
+/* Reset some default styles */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #333;
+    /* background-color: #3eb489; */
+    color: white;
+    height: 70px;
+    /* text-align: center; */
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: 20px;
+    background-color: #555;
+    padding: 10px 20px;
+}
+
+nav li {
+    margin: 10px 10px;
+    padding: 10px 10px;
+
+}
+nav lie {
+    margin: 10px 900px;
+    padding: 10px 100px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 10px;
+}
+.logo{
+    display: flex;
+   margin-left: 20px;
+   width: 100%;
+   height: 70px;
+}
+.h1{
+    display: flex;
+    margin-left: 500px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+nava ul {
+    list-style: none;
+    display: flex;
+    justify-content: 20px;
+    background-color: #555;
+    padding: 10px 20px;
+}
+
+nava li {
+    margin: 10px 20px;
+    padding: 10px 15px;
+
+}
+
+nava a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 60px;
+    padding: 40px 40px;
+}
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    position: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile, .content {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 50px;
+}

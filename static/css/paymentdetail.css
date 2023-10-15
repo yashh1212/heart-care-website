@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  /* box-sizing: border-box; */
+  /* background-image: url('https://example.com/your-image-url.jpg'); */
+  background-size: 100%; /* Adjust the background image size */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  /* background-attachment: fixed; */
+background-color: gray;
+background-color: rgba(128, 128, 128, 0.5);
+
+}
+/* CSS for header */
+.header {
+  display: flex;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 80px;
+  width: 1550px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right,#4d174d,#5a2e49);
+  /* background-color: #3eb489; */
+}
+
+.header .logo {
+    display: flex;
+    height: 60px;
+    width: 60px;
+  margin-left: 15px;
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #fff;
+  padding: 35px 20px;
+}
+
+.container{
+    /* background-image: linear-gradient(to right,#4d174d,#5a2e49); */
+    background-color: #fff;
+    max-width: 750px;
+    padding: 28px;
+    margin:100px auto;
+    height:100vh;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0px 15px 20px #065964; */
+}
+.container h2{
+  color: black;
+}
+h1{
+    position: absolute;
+    left: 34%;
+    top: 25%;
+} 
+h2{
+    position: relative;
+    left: 30%;
+    top: auto;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: middle ;
+    color: #000000;
+    padding-bottom: 8px;
+    border-bottom: 2px rgb(78, 69, 69);
+}
+
+h2{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left  ;
+    color: #ffffff;
+    padding-bottom: 8px;
+    border-bottom: 2px rgb(78, 69, 69);
+}
+
+.formbold-mb-5 {
+    margin-bottom: 20px;
+    color: black;
+  }
+  .formbold-pt-3 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: 5a2e49;
+  }
+ .btn{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0e0d0d;
+    margin-bottom: 12px;
+  }
+  .formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+.
