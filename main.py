@@ -74,12 +74,7 @@ def generate_otp(length=6):
 # Send OTP via email
 def send_otp_via_email(ab):
     global otp
-    smtp_server = 'smtp.gmail.com'
-    smtp_port = 587  
-    smtp_username = 'yashdhokane12@gmail.com'
-    smtp_password = 'nwqhkkjfbjvsvlcj'
-    sender_email = 'yashdhokane12@gmail.com'
-    receiver_email =ab
+ 
   
     otp = generate_otp()
 
@@ -222,99 +217,8 @@ def create_invoice(patient_name, appointment_id, payment_status, total_amount, p
 
 
 
-def payment():
-    global order_id
-    api_key = 'rzp_test_Od3RFiM9gwIvNj'
-    api_secret = 'dWBreaqHOZ6g8QKSVAvrIg2i'
-
-    # Create an order
-    url = 'https://api.razorpay.com/v1/orders'
-    headers = {
-        'Content-Type': 'application/json',
-    }
-
-    data = {
-        'amount': 100 * 100,  # Amount in paise (100 paise = 1 INR)
-        'currency': 'INR',
-        'receipt': 'order_rcptid_11',
-    }
-
-    # Encode your API key and secret in base64 format
-    auth = (api_key, api_secret)
-
-    # Make the POST request to create the order
-    response = requests.post(url, headers=headers, data=json.dumps(data), auth=auth)
-
-    # Check if the request was successful
-    if response.status_code == 200:
-        order_data = response.json()
-        order_id = order_data['id']
-        print(f"Generated Order ID: {order_id}")
-    else:
-        print(f"Order creation failed with status code: {response.status_code}")
-        print(response.text)
-        
-        
-        
-def send_details_via_email():
-    smtp_server = 'smtp.gmail.com'
-    smtp_port = 587  
-    smtp_username = 'yashdhokane12@gmail.com'
-    smtp_password = 'nwqhkkjfbjvsvlcj'
-    sender_email = 'yashdhokane12@gmail.com'
-    receiver_email ='hulk.yt98@gmail.com'
-  
-    ID =1
-    patient_name=session.get('pt_name')
-    doctor_name=session.get('doctor_name1')
-    schedule_time=session.get('app_time')
-    date=session.get('date')
-    hospital_name=session.get('address_hspital')
-    
-    
-    # pt_firstname=session.get('pt_firstname')
-    # doctor_name1=session.get('doctor_name1')
-    # pt_email=session.get('pt_email')
-    # pt_phone=session.get('pt_phone')
-    # pt_gender=session.get('pt_gender')
-    # DOB=session.get('DOB')
-    # Doctor_id=session.get('Doctor_id')
-    # date=session.get('date')
-    # app_time=session.get('app_time')
-    # pt_name=session.get('pt_name')
-    # address_hspital=session.get('address_hspital')
-    
-
-    subject = 'Your Appointment Details'
-    body = f'Dear {patient_name}, your appointment (ID: {ID}) with {doctor_name} has been confirmed for {date} at {schedule_time} for {hospital_name} . You can also book an appt (Physical/Tele consult) via www.HeartCare.com. For any other assistance whatsapp 9881967037. Rest assured we are following all safety protocols.'
    
-
-
-    message = MIMEMultipart()
-    message['From'] = sender_email
-    message['To'] = receiver_email
-    message['Subject'] = subject
-    message.attach(MIMEText(body, 'plain')) 
-
-   
-    try:
-        server = smtplib.SMTP(smtp_server, smtp_port)
-        server.starttls()  
-        server.login(smtp_username, smtp_password)
-        server.sendmail(sender_email, receiver_email, message.as_string())
-        server.quit()
-        print(f'message sent successfully to {receiver_email}')
-        return body
-    except Exception as e:
-        print(f'Error: {str(e)}')
-        return None
-    
-    
-# send_details_via_email()
-
-
-
-
+ 
 def predict(a):
     # Load the CSV data into a Pandas DataFrame
     heart_data = pd.read_csv("heart.csv") 
@@ -365,12 +269,7 @@ def predict(a):
 app = Flask(__name__)
 app.secret_key = 'yash'
 
-conn = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="yash1212",
-    database="user_info",
-)
+ 
 cursor = conn.cursor()
 
 @app.route('/userlogin')
